@@ -36,6 +36,20 @@ g_PluginInfo =
 				},
 			},
 		},
+		
+		["/time"] =
+		{
+			Permission = "WorldUtilities.time",
+			Handler = HandleTimeCommand,
+			HelpString = "The command that manages the time. As parameters it has: Set, Stop and Start.",
+		},
+		
+		["/weather"] =
+		{
+			Permission = "WorldUtilities.weather",
+			Hanalder = HandleWeatherCommand,
+			HelpString = "The command that manages the weather. As parameters it has: Set, Stop, Start and Change.",
+		},
 	},
 }
 

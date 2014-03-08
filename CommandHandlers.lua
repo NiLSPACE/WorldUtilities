@@ -8,6 +8,13 @@
 function HandleWeatherCommand(a_Split, a_Player)
 	-- /wu weather [set/stop/start/change]
 	
+	-- Check if the /wu was used or /weather. If /weather was used we have to move all the parameters up by one.
+	if (a_Split[1] ~= "/wu") then
+		for I=#a_Split + 1, 1, -1 do
+			a_Split[I] = a_Split[I - 1]
+		end
+	end
+	
 	-- The player didn't give enough parameters.
 	if (#a_Split < 3) then
 		a_Player:SendMessage(cChatColor.Rose .. "Not enough parameters.")
@@ -79,6 +86,13 @@ end
 
 function HandleTimeCommand(a_Split, a_Player)
 	-- wu time [set/stop/start]
+	
+	-- Check if the /wu was used or /time. If /time was used we have to move all the parameters up by one.
+	if (a_Split[1] ~= "/wu") then
+		for I=#a_Split + 1, 1, -1 do
+			a_Split[I] = a_Split[I - 1]
+		end
+	end
 	
 	-- The player didn't give enough parameters.
 	if (#a_Split < 3) then
