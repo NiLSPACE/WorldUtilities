@@ -34,13 +34,7 @@ function Initialize(a_Plugin)
 	cPluginManager:AddHook(cPluginManager.HOOK_WEATHER_CHANGING, OnWeatherChanging)
 	cPluginManager:AddHook(cPluginManager.HOOK_WORLD_TICK, OnWorldTick)
 	
-	cRoot:Get():ForEachWorld(function(a_World)
-		local WorldName = a_World:GetName()
-		g_WorldStuckTime[WorldName] = -1
-		g_WorldSetTimeCountdown[WorldName] = 20
-		g_WorldsWithoutWeatherChange[WorldName] = false
-		g_WorldExeption[WorldName] = false
-	end)
+	LoadWorlds()
 	
 	LOG("Initialized WorldUtilities v" .. a_Plugin:GetVersion())
 	return true
@@ -52,5 +46,6 @@ end
 
 
 function OnDisable()
+	SaveWorlds()
 	LOG("WorldUtilities is shutting down.")
 end
