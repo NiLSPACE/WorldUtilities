@@ -47,7 +47,7 @@ g_PluginInfo =
 		["/weather"] =
 		{
 			Permission = "WorldUtilities.weather",
-			Hanalder = HandleWeatherCommand,
+			Handler = HandleWeatherCommand,
 			HelpString = "The command that manages the weather. As parameters it has: Set, Stop, Start and Change.",
 		},
 	},
