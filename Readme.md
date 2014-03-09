@@ -15,5 +15,5 @@ A plugin that allows you to manage the weather and time in your world.
 # Permissions
 | Permissions | Description | Commands | Recommended groups |
 | ----------- | ----------- | -------- | ------------------ |
-WorldUtilities.time |  | `/time`, `/wu time` | 
-WorldUtilities.weather |  | `/weather`, `/wu weather` | 
+WorldUtilities.time | This permission allows a player to manage the time in the world he's standing in. | `/time`, `/wu time`, `/time`, `/wu time` | admins, mods |
+WorldUtilities.weather | This permission allows a player to manage the weather in the world he's standing in. | `/weather`, `/wu weather`, `/weather`, `/wu weather` | admins, mods |
