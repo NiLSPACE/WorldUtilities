@@ -124,7 +124,7 @@ function HandleTimeCommand(a_Split, a_Player)
 		local ToSetTime = tonumber(a_Split[4])
 		
 		if (NewTime == "DAY") then
-			ToSetTime = 12000
+			ToSetTime = 0
 		elseif (NewTime == "NIGHT") then
 			ToSetTime = 13187
 		end
